@@ -1,9 +1,9 @@
 import { combineReducers } from "redux";
 
-import launches from "./launches";
+import programs from "./programs";
 
 const rootReducer = combineReducers({
-  launches,
+  programs,
 });
 
 export default rootReducer;

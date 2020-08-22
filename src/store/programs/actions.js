@@ -1,22 +1,22 @@
 import api from 'services/api';
 import {
-    GET_LAUNCHES_BEGIN,
-    GET_LAUNCHES_SUCCESS,
-    GET_LAUNCHES_FAIL,
+    GET_PROGRAMS_BEGIN,
+    GET_PROGRAMS_SUCCESS,
+    GET_PROGRAMS_FAIL,
     APPLY_FILTER_BEGIN,
     APPLY_FILTER_SUCCESS,
     APPLY_FILTER_FAIL,
 } from "./types";
 
-export const getLaunches = () => async (dispatch) => {
+export const getPrograms = () => async (dispatch) => {
     try {
-        dispatch({ type: GET_LAUNCHES_BEGIN });
+        dispatch({ type: GET_PROGRAMS_BEGIN });
 
-        const launches = await api.get('launches', { limit: 16 });
+        const programs = await api.get('launches', { limit: 16 });
 
-        dispatch({ type: GET_LAUNCHES_SUCCESS, payload: launches })
+        dispatch({ type: GET_PROGRAMS_SUCCESS, payload: programs })
     } catch (err) {
-        dispatch({ type: GET_LAUNCHES_FAIL, payload: err.message });
+        dispatch({ type: GET_PROGRAMS_FAIL, payload: err.message });
     }
 }
 

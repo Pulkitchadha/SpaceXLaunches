@@ -1,33 +1,33 @@
 import {
-    GET_LAUNCHES_BEGIN,
-    GET_LAUNCHES_SUCCESS,
-    GET_LAUNCHES_FAIL,
+    GET_PROGRAMS_BEGIN,
+    GET_PROGRAMS_SUCCESS,
+    GET_PROGRAMS_FAIL,
     APPLY_FILTER_BEGIN,
     APPLY_FILTER_SUCCESS,
     APPLY_FILTER_FAIL,
 } from './types';
 
 const INITIAL_STATE = {
-    launches: [],
+    programs: [],
     loading: false,
     error: null,
 };
 
 export default function (state = INITIAL_STATE, { type, payload }) {
     switch (type) {
-        case GET_LAUNCHES_BEGIN:
+        case GET_PROGRAMS_BEGIN:
             return {
                 ...state,
                 loading: true,
                 error: null
             }
-        case GET_LAUNCHES_SUCCESS:
+        case GET_PROGRAMS_SUCCESS:
             return {
                 ...state,
                 loading: false,
-                launches: payload,
+                programs: payload,
             }
-        case GET_LAUNCHES_FAIL:
+        case GET_PROGRAMS_FAIL:
             return {
                 ...state,
                 loading: false,
@@ -43,7 +43,7 @@ export default function (state = INITIAL_STATE, { type, payload }) {
             return {
                 ...state,
                 loading: false,
-                launches: payload,
+                programs: payload,
             }
         case APPLY_FILTER_FAIL:
             return {
