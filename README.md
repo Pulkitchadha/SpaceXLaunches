@@ -8,13 +8,13 @@ Front-end application that help users list and browse all launches by SpaceX pro
 1) Open your terminal and run the command:
 
 ```
-npx create-next-app space-x-launches --use-npm --example "https://github.com/vercel/next-learn-starter/tree/master/learn-starter"
+git clone https://github.com/Pulkitchadha/SpaceXLaunches.git
 ```
 
-2) You now have a new directory called space-x-launches. Let’s cd into it:
+2) You now have a new directory called SpaceXLaunches. Let’s cd into it:
 
 ```
-cd space-x-launches
+cd SpaceXLaunches
 ```
 
 3) Run the development server
