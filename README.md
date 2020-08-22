@@ -17,7 +17,13 @@ git clone https://github.com/Pulkitchadha/SpaceXLaunches.git
 cd SpaceXLaunches
 ```
 
-3) Run the development server
+3) Run the command
+
+```
+npm install
+```
+
+4) Run the development server
 
 ```
 npm run dev
