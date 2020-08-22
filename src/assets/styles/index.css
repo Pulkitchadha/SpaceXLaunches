@@ -1,5 +1,8 @@
 .App {
-    text-align: center;
-    margin-top: 200px;
-  }
+  text-align: center;
+  margin-top: 200px;
+}
   
+.ant-layout-header {
+  padding: 0 10px !important;
+}
