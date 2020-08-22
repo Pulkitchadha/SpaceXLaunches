@@ -1,0 +1,27 @@
+import Document, { Html, Head, Main, NextScript } from 'next/document';
+
+class MyDocument extends Document {
+    static async getInitialProps(ctx) {
+        const initialProps = await Document.getInitialProps(ctx)
+        return { ...initialProps }
+    }
+
+    render() {
+        return (
+            <Html lang="en">
+                <Head>
+                    <title>SpaceXLaunches</title>
+                    <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+                    <link rel="shortcut icon" type="image/x-icon" href="/myAvatar.ico" />
+                    <meta name="description" content="Front-end application that help users list and browse all launches by SpaceX program"></meta>
+                </Head>
+                <body>
+                    <Main />
+                    <NextScript />
+                </body>
+            </Html>
+        )
+    }
+}
+
+export default MyDocument;
