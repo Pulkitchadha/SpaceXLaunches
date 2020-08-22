@@ -27,7 +27,6 @@ npm run dev
 
 4) Open http://localhost:3000 from your browser.
 
-
 ## App Structure
 
 ### `src/pages/`
