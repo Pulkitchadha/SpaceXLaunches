@@ -8,6 +8,13 @@ function createAxios() {
     axios.defaults.headers.common["Content-Type"] = "application/json";
     axios.defaults.timeout = 2*60*1000; // 2 minutes
 
+    axios.interceptors.response.use(
+        (response) => response?.data,
+        (error) => {
+            if (error?.response?.data) return Promise.reject(error.response.data);
+            return Promise.reject(error);
+        }
+    );
     return axios;
 }
 

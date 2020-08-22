@@ -1,9 +1,14 @@
 import React from 'react';
-import '../assets/styles/index.css';
+import { Provider } from "react-redux";
+import store from "../store";
+
+import 'assets/styles/index.css';
 
 function App({ Component, pageProps }) {
     return (
-        <Component {...pageProps} />
+        <Provider store={store}>
+            <Component {...pageProps} />
+        </Provider>
     );
 }
 
