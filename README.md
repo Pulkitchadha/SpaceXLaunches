@@ -1,7 +1,8 @@
 # SpaceXLaunches
 Front-end application that help users list and browse all launches by SpaceX program.This project is bootstraped by nextjs.
 
-## Get a quick preview
+## Demo link
+[Click here to view the demo](https://spacexlaunchpulkit.herokuapp.com/)
 
 # Getting Started:
 
