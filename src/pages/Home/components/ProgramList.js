@@ -23,7 +23,7 @@ export default class ProgramList extends Component {
                 <span className="h3 text-danger">Something went wrong.</span>
             </div>
         )
-        if (!programs.length) return (
+        if (!programs?.length) return (
             <div className="col-sm-12 text-center mt-5 pt-5">
                 <span className="h3">No launch program found.</span>
             </div>
@@ -32,7 +32,7 @@ export default class ProgramList extends Component {
         return (
             <div className="row">
                 {
-                   programs.map(program => (
+                   programs?.map(program => (
                         <div className="col-sm-3 mt-4" key={program.flight_number}>
                             <ProgramCard program={program} />
                         </div>
