@@ -12,7 +12,11 @@ export const getPrograms = () => async (dispatch) => {
     try {
         dispatch({ type: GET_PROGRAMS_BEGIN });
 
-        const programs = await api.get('launches', { limit: 16 });
+        const programs = await api.get('launches',{
+            launch_success: true,
+            land_success: true,
+            launch_year: 2020
+        });
 
         dispatch({ type: GET_PROGRAMS_SUCCESS, payload: programs })
     } catch (err) {
@@ -24,11 +28,12 @@ export const applyFilter = (filters) => async (dispatch) => {
     try {
         dispatch({ type: APPLY_FILTER_BEGIN });
 
+        console.log({ filters });
         const payload = {
-            limit: filters.limit || 20,
-            launch_success: filters.launchSuccess || true,
-            land_success: filters.landSuccess || true,
-            launch_year: filters.launchYear || 2014
+            // limit: 50,
+            launch_success: filters.launchSuccess,
+            land_success: filters.landSuccess,
+            launch_year: filters.launchYear || 2020
         }
         const launches = await api.get('launches', payload);
 

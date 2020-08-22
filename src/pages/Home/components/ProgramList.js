@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Spin } from 'antd';
 
 import ProgramCard from './ProgramCard';
 
@@ -13,17 +14,17 @@ export default class ProgramList extends Component {
         const { programs, loading, error } = this.props;
 
         if (loading) return (
-            <div className="App text-center pt-5">
-                <span className="h3">Loading...</span>
+            <div className="App text-center mt-5 pt-5">
+                <span className="h3"><Spin size="large" /></span>
             </div>
         )
         if (error) return (
-            <div className="App text-center pt-5">
+            <div className="App text-center mt-5 pt-5">
                 <span className="h3 text-danger">Something went wrong.</span>
             </div>
         )
         if (!programs.length) return (
-            <div className="col-sm-12 text-center pt-5">
+            <div className="col-sm-12 text-center mt-5 pt-5">
                 <span className="h3">No launch program found.</span>
             </div>
         )

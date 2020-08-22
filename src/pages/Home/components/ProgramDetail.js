@@ -17,7 +17,7 @@ const ProgramDetail = ({ program }) => (
         </div>
         <div className="col-sm-12">
             <span className="col-sm-6 text-dark font-weight-bold">Successful Landing:</span>
-            <span className="col-sm-6">{program?.rocket?.first_stage?.cores?.length ? program?.rocket?.first_stage?.cores?.land_success?.toString() : 'NA'}</span>
+            <span className="col-sm-6">{program?.rocket?.first_stage?.cores?.length ? program?.rocket?.first_stage?.cores[0]?.land_success?.toString() : 'NA'}</span>
         </div>
     </div>
 )
