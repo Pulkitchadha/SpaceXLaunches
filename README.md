@@ -37,15 +37,10 @@ npm run dev
 ## App Structure
 
 ### `src/pages/`
-
-Put all your entry pages here. These are interpreted as separate routes by
-Next.js.
+Put all your entry pages here. These are interpreted as separate routes by Next.js.
 
 ### `src/components/`
-
-All your shared React components.
+All the shared React components are placed in this folder.
 
 ### `public/static/`
 Public resources hosted as static files
-
-### `src/pages/api/`
