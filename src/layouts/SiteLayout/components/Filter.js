@@ -26,20 +26,20 @@ class Filter extends Component {
                     <span className="h5 ml-2">Filters</span>
                 </div>
                 <div className="col-sm-12 text-center mt-2">
-                    <span className="h6 ml-2"><u>Launch Year</u></span>
+                    <span className="h6 ml-2"><u>Launch Year</u></span><br/>
                     <Radio.Group name="launchYear" onChange={this.onChange} defaultValue={this.state.launchYear}>
                         {launchYears.map(year => <Radio.Button key={year} className="mt-3 text-success" value={year}>{year}</Radio.Button>)}
                     </Radio.Group>
                 </div>
                 <div className="col-sm-12 text-center mt-2">
-                    <span className="h6 ml-2"><u>Successful Launch</u></span>
+                    <span className="h6 ml-2"><u>Successful Launch</u></span><br/>
                     <Radio.Group name="launchSuccess" onChange={this.onChange} defaultValue={this.state.landSuccess}>
                         <Radio.Button className="mt-3 text-success" value="true">True</Radio.Button>
                         <Radio.Button className="mt-3 text-success" value="false">False</Radio.Button>
                     </Radio.Group>
                 </div>
                 <div className="col-sm-12 text-center mt-2">
-                    <span className="h6 ml-2"><u>Successful Landing</u></span>
+                    <span className="h6 ml-2"><u>Successful Landing</u></span><br/>
                     <Radio.Group name="landSuccess" onChange={this.onChange} defaultValue={this.state.landSuccess}>
                         <Radio.Button className="mt-3 text-success" value="true">True</Radio.Button>
                         <Radio.Button className="mt-3 text-success" value="false">False</Radio.Button>
